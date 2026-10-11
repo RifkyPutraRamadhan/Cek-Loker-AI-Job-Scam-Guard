@@ -95,9 +95,11 @@ sequenceDiagram
         VT-->>Agent: Analysis stats, reputation
     end
     Agent->>Agent: Compute weighted score
-    opt Score 50 or above
+    alt Score >= 50 (High Risk)
         Agent->>Docs: Create formal report
         Agent->>Gmail: Create formal draft
+    else Score < 50 (Safe / Low-Medium)
+        Note over Agent: Bypass report & draft generation
     end
     Agent-->>MCP: Chat Output
     MCP-->>Bob: Result
