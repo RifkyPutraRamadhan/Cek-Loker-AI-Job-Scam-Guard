@@ -78,9 +78,9 @@ flowchart TD
     N --> S["Skor risiko berbobot"]
     T --> S
     V --> S
-    S -->|"skor 50 atau lebih"| D["Google Docs: laporan formal"]
-    S -->|"skor 50 atau lebih"| G["Gmail: draf formal, tidak pernah dikirim"]
-    S --> O["Chat Output: skor, indikator, arahan"]
+    S -->|"skor >= 50 (Risiko Tinggi)"| D["Google Docs: laporan formal"]
+    S -->|"skor >= 50 (Risiko Tinggi)"| G["Gmail: draf formal, tidak pernah dikirim"]
+    S -->|"skor < 50 (Aman)"| O["Chat Output: skor, indikator, arahan"]
     D --> O
     G --> O
     O --> B
