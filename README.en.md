@@ -41,8 +41,8 @@
 Job scams are a real threat to job seekers in Indonesia:
 
 - According to SEEK research data, Indonesia is currently recorded as the **largest hotspot for job scams in Asia Pacific** [[1]](#references).
-- Indonesia accounts for **38%** of all fraud attempts in the Asia Pacific region and **62%** of job scam cases across Asia (detikFinance, 2025) [[2]](#references).
-- **Entry-level jobs** such as administration and office staff are the main targets, with more than **39%** of job ads in those categories flagged as scams (BaliNews.id, 2025) [[1]](#references).
+- Indonesia accounts for **38%** of all fraud attempts in the Asia Pacific region and **62%** of job scam cases across Asia [[2]](#references).
+- **Entry-level jobs** such as administration and office staff are the main targets, with more than **39%** of job ads in those categories flagged as scams [[1]](#references).
 - The Ministry of Communication and Digital Affairs (Kemkomdigi) together with BP2MI took down **7,908** fake overseas job ads between January and August 2026 [[3]](#references).
 
 The victims are typically working-age job seekers who urgently need work, receive offers through instant messaging or social media, and have limited digital security literacy. Manual verification (researching the company on their own, asking communities, waiting for an official reply) is slow, unsystematic, and easily fooled by convincing fake websites or profiles.
