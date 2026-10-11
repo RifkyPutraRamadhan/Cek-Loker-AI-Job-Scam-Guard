@@ -40,8 +40,10 @@
 
 Penipuan berkedok lowongan kerja adalah ancaman nyata bagi pencari kerja di Indonesia:
 
-- Indonesia menyumbang **38%** dari seluruh upaya penipuan di kawasan Asia Pasifik dan **62%** dari kasus penipuan lowongan kerja di Asia, menurut data SEEK yang dilaporkan detikFinance (20 November 2025) [[1]](#referensi).
-- Kemkomdigi bersama BP2MI menurunkan **7.908** iklan lowongan kerja luar negeri fiktif pada Januari–Agustus 2026 [[2]](#referensi).
+- Berdasarkan data riset SEEK, Indonesia saat ini tercatat sebagai **titik rawan (hotspot) penipuan lowongan kerja terbesar di Asia Pasifik** [[1]](#referensi).
+- Indonesia menyumbang **38%** dari seluruh upaya penipuan di kawasan Asia Pasifik dan **62%** dari kasus penipuan lowongan kerja di Asia (detikFinance, 2025) [[2]](#referensi).
+- **Sektor pekerjaan pemula** seperti administrasi dan staf kantor menjadi sasaran utama, di mana lebih dari **39%** iklan lowongan di kategori tersebut terindikasi sebagai penipuan (BaliNews.id, 2025) [[1]](#referensi).
+- Kemkomdigi bersama BP2MI menurunkan **7.908** iklan lowongan kerja luar negeri fiktif pada Januari–Agustus 2026 [[3]](#referensi).
 
 Korbannya umumnya pencari kerja usia produktif yang butuh pekerjaan segera, menerima tawaran lewat pesan instan atau media sosial, dan memiliki literasi keamanan digital terbatas. Verifikasi manual (mencari info perusahaan sendiri, bertanya ke komunitas, menunggu balasan resmi) lambat, tidak sistematis, dan mudah dikelabui oleh situs atau profil tiruan yang meyakinkan.
 
@@ -91,7 +93,7 @@ flowchart TD
     B --> R["Pengguna membaca hasil dan memutuskan"]
 ```
 
-**Stack:** IBM Langflow (workflow dan agen) · IBM Bob (lapisan percakapan, terhubung via MCP) · Composio (konektor Notion, Google Docs, Gmail) · Tavily (pencarian web) · VirusTotal (reputasi URL).
+**Stack:** IBM Langflow (mesin workflow dan agen, yang kini merupakan bagian dari portofolio IBM pasca-akuisisi DataStax [[4]](#referensi)) · IBM Bob (lapisan percakapan, terhubung via MCP) · Composio (konektor Notion, Google Docs, Gmail) · Tavily (pencarian web) · VirusTotal (reputasi URL).
 
 ### Anggaran pemanggilan tool per pengecekan
 
@@ -151,7 +153,7 @@ Skor maksimum adalah 90. Aturan keputusan penting: error tool, hasil kosong, ata
 | Draf Gmail | Diimplementasikan | Hanya membuat draf. Pengiriman tidak diaktifkan. |
 | Laporan Google Docs | Diimplementasikan, perlu uji ulang | Pernah menghasilkan 401. Uji ulang setelah menghubungkan ulang OAuth. |
 | Input gambar | Level prompt | Hanya jika model yang dipilih menerima gambar. |
-| Koneksi IBM Bob via MCP | Dalam validasi | Update setelah uji end-to-end. |
+| Koneksi IBM Bob via MCP | Diimplementasikan | Berhasil terhubung dan diuji secara end-to-end. |
 | Application tracker (Google Sheets) | Direncanakan | Belum ada di flow. |
 | Pengingat (Google Calendar) | Direncanakan | Belum ada di flow. |
 | Feedback loop komunitas (tulis ke Notion) | Direncanakan | Butuh langkah moderasi. |
@@ -244,7 +246,7 @@ TAVILY_API_KEY=your_tavily_search_api_key_here
 2. Impor data dari [`mock-database/cek-loker-companies-db.csv`](mock-database/cek-loker-companies-db.csv).
 3. Berikan akses integrasi Notion ke database tersebut.
 
-Nilai `Registration Status`: `Terdaftar`, `Tidak Terdaftar`, `Belum Terverifikasi`. Entri fiktif memakai akhiran `(Fiktif)` dan domain `.test` (dicadangkan RFC 2606 untuk pengujian [[4]](#referensi)).
+Nilai `Registration Status`: `Terdaftar`, `Tidak Terdaftar`, `Belum Terverifikasi`. Entri fiktif memakai akhiran `(Fiktif)` dan domain `.test` (dicadangkan RFC 2606 untuk pengujian [[5]](#referensi)).
 
 ### 3. Impor flow Langflow
 
@@ -254,7 +256,7 @@ Nilai `Registration Status`: `Terdaftar`, `Tidak Terdaftar`, `Belum Terverifikas
 4. Tempel prompt dari [`prompts/cek-loker-ai-job-scam-guard-component.md`](prompts/cek-loker-ai-job-scam-guard-component.md) ke kolom instruksi komponen Agent. Atur Max Iterations ke 25.
 5. Uji flow di **Playground** dengan salah satu contoh di `sample-inputs/` sebelum lanjut.
 
-> Catatan: akun Composio harus terhubung di bawah user ID yang dikirim Langflow (default `default`), jika tidak akan muncul "No connected account found" [[5]](#referensi).
+> Catatan: akun Composio harus terhubung di bawah user ID yang dikirim Langflow (default `default`), jika tidak akan muncul "No connected account found" [[6]](#referensi).
 
 ### 4. Hubungkan IBM Bob lewat MCP
 
@@ -357,11 +359,12 @@ Contoh `.gitignore` minimal:
 
 ## Referensi
 
-1. detikFinance (20 November 2025). "Ini Modus Penipuan Lowongan yang Jerat Banyak Pencari Kerja RI." https://finance.detik.com/berita-ekonomi-bisnis/d-8219789/ini-modus-penipuan-lowongan-yang-jerat-banyak-pencari-kerja-ri
-2. Bisnis.com (8 September 2026). "Waspada Penipuan! Komdigi Ungkap Ada 7.908 Iklan Loker Luar Negeri Fiktif." https://teknologi.bisnis.com/read/20260908/84/2002462/waspada-penipuan-komdigi-ungkap-ada-7908-iklan-loker-luar-negeri-fiktif
-3. DBTA (2025). "IBM Officially Closes Acquisition of DataStax." https://www.dbta.com/Editorial/News-Flashes/IBM-Officially-Closes-Acquisition-of-DataStax-169711.aspx
-4. IETF (1999). RFC 2606, "Reserved Top Level DNS Names." https://www.rfc-editor.org/rfc/rfc2606
-5. Composio. "Authentication." https://docs.composio.dev/docs/authentication
+1. BaliNews.id (2025). "Waspada! Indonesia Jadi Hotspot Penipuan Lowongan Kerja Terbesar di Asia Pasifik Menurut Data SEEK." https://balinews.id/waspada-indonesia-jadi-hotspot-penipuan-lowongan-kerja-terbesar-di-aia-pasifik-menurut-data-seek
+2. detikFinance (20 November 2025). "Ini Modus Penipuan Lowongan yang Jerat Banyak Pencari Kerja RI." https://finance.detik.com/berita-ekonomi-bisnis/d-8219789/ini-modus-penipuan-lowongan-yang-jerat-banyak-pencari-kerja-ri
+3. Bisnis.com (8 September 2026). "Waspada Penipuan! Komdigi Ungkap Ada 7.908 Iklan Loker Luar Negeri Fiktif." https://teknologi.bisnis.com/read/20260908/84/2002462/waspada-penipuan-komdigi-ungkap-ada-7908-iklan-loker-luar-negeri-fiktif
+4. DBTA (2025). "IBM Officially Closes Acquisition of DataStax." (Langflow kini bagian dari portofolio watsonx IBM). https://www.dbta.com/Editorial/News-Flashes/IBM-Officially-Closes-Acquisition-of-DataStax-169711.aspx
+5. IETF (1999). RFC 2606, "Reserved Top Level DNS Names." https://www.rfc-editor.org/rfc/rfc2606
+6. Composio. "Authentication." https://docs.composio.dev/docs/authentication
 
 ## Lisensi
 
