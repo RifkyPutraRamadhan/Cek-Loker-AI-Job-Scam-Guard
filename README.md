@@ -7,7 +7,7 @@
 ![IBM Bob](https://img.shields.io/badge/IBM-Bob-0f62fe)
 ![MCP](https://img.shields.io/badge/Protocol-MCP-blueviolet)
 
-**Tema:** Education & Future of Work (bersinggungan dengan perlindungan konsumen digital)
+**Tema:** Education & Future of Work (bersinggungan dengan perlindungan konsumen digital)<br>
 **Dibuat untuk:** Hackathon Nasional IBM SkillsBuild University Education (Hacktiv8 x IBM)
 
 ---
