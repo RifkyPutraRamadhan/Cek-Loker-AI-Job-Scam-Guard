@@ -41,8 +41,8 @@
 Penipuan berkedok lowongan kerja adalah ancaman nyata bagi pencari kerja di Indonesia:
 
 - Berdasarkan data riset SEEK, Indonesia saat ini tercatat sebagai **titik rawan (hotspot) penipuan lowongan kerja terbesar di Asia Pasifik** [[1]](#referensi).
-- Indonesia menyumbang **38%** dari seluruh upaya penipuan di kawasan Asia Pasifik dan **62%** dari kasus penipuan lowongan kerja di Asia (detikFinance, 2025) [[2]](#referensi).
-- **Sektor pekerjaan pemula** seperti administrasi dan staf kantor menjadi sasaran utama, di mana lebih dari **39%** iklan lowongan di kategori tersebut terindikasi sebagai penipuan (BaliNews.id, 2025) [[1]](#referensi).
+- Indonesia menyumbang **38%** dari seluruh upaya penipuan di kawasan Asia Pasifik dan **62%** dari kasus penipuan lowongan kerja di Asia [[2]](#referensi).
+- **Sektor pekerjaan pemula** seperti administrasi dan staf kantor menjadi sasaran utama, di mana lebih dari **39%** iklan lowongan di kategori tersebut terindikasi sebagai penipuan [[1]](#referensi).
 - Kemkomdigi bersama BP2MI menurunkan **7.908** iklan lowongan kerja luar negeri fiktif pada Januari–Agustus 2026 [[3]](#referensi).
 
 Korbannya umumnya pencari kerja usia produktif yang butuh pekerjaan segera, menerima tawaran lewat pesan instan atau media sosial, dan memiliki literasi keamanan digital terbatas. Verifikasi manual (mencari info perusahaan sendiri, bertanya ke komunitas, menunggu balasan resmi) lambat, tidak sistematis, dan mudah dikelabui oleh situs atau profil tiruan yang meyakinkan.
