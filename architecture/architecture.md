@@ -40,9 +40,9 @@ flowchart TD
     N --> S["Weighted risk scoring"]
     T --> S
     V --> S
-    S -->|"score 50 or above"| D["Google Docs: formal report"]
-    S -->|"score 50 or above"| G["Gmail: formal draft, never sent"]
-    S --> O["Chat Output: score, indicators, guidance"]
+    S -->|"score >= 50 (High Risk)"| D["Google Docs: formal report"]
+    S -->|"score >= 50 (High Risk)"| G["Gmail: formal draft, never sent"]
+    S -->|"score < 50 (Safe)"| O["Chat Output: score, indicators, guidance"]
     D --> O
     G --> O
     O --> B
