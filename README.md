@@ -148,11 +148,13 @@ Skor maksimum adalah 90. Aturan keputusan penting: error tool, hasil kosong, ata
 | Flow Langflow dengan Agent dan lima tool | Diimplementasikan | Berjalan di Langflow Playground. |
 | Query basis pengetahuan Notion | Diimplementasikan | Hanya baca. |
 | Pencarian web (Tavily) | Diimplementasikan | Satu panggilan per pengecekan. |
-| Lookup domain VirusTotal | Diimplementasikan, sebagian terverifikasi | Panggilan manual berhasil (HTTP 200). Uji Agent penuh dengan URL nyata perlu didokumentasikan. |
+| Lookup domain VirusTotal | Diimplementasikan | Berhasil menganalisis reputasi URL secara terintegrasi. |
 | Skor berbobot dan level risiko | Diimplementasikan | Rubrik ada di instruksi Agent. |
 | Draf Gmail | Diimplementasikan | Hanya membuat draf. Pengiriman tidak diaktifkan. |
-| Laporan Google Docs | Diimplementasikan, perlu uji ulang | Pernah menghasilkan 401. Uji ulang setelah menghubungkan ulang OAuth. |
-| Input gambar | Level prompt | Hanya jika model yang dipilih menerima gambar. |
+| Laporan Google Docs | Diimplementasikan | Berhasil menghasilkan dokumen laporan melalui OAuth terautentikasi. |
+| Input teks | Diimplementasikan | Berhasil memproses dan mengekstrak informasi langsung dari deskripsi teks lowongan. |
+| Input tautan (URL) | Diimplementasikan | Berhasil mengekstrak konteks halaman web lowongan dan memicu verifikasi domain. |
+| Input gambar | Diimplementasikan | Didukung sepenuhnya jika LLM yang digunakan memiliki kapabilitas vision. |
 | Koneksi IBM Bob via MCP | Diimplementasikan | Berhasil terhubung dan diuji secara end-to-end. |
 | Application tracker (Google Sheets) | Direncanakan | Belum ada di flow. |
 | Pengingat (Google Calendar) | Direncanakan | Belum ada di flow. |
