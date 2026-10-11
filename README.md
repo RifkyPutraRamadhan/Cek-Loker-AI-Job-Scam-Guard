@@ -176,15 +176,37 @@ Cek-Loker-AI-Job-Scam-Guard/
 ├── mock-database/
 │   ├── cek-loker-companies-db.csv   # 14 baris data sintetik untuk Notion
 │   └── README.md
-├── sample-inputs/                # Input uji: teks, URL, gambar (poster rendah/sedang/tinggi)
+├── sample-inputs/                # Input uji: teks, URL, gambar
+│   ├── README.md
 │   ├── text/
+│   │   └── test-cases.md
 │   ├── url/
+│   │   └── test-cases.md
 │   └── image/
+│       ├── README.md
+│       ├── poster-cek-loker-1-low.jpg
+│       ├── poster-cek-loker-2-medium.jpg
+│       └── poster-cek-loker-3-high.jpg
 ├── action-outputs/               # Hasil aktual agen saat pengujian
-│   ├── text/ url/ image/
-├── expected-outputs/             # Ground truth dan kriteria evaluasi
-│   ├── evaluation-criteria.md
-│   └── text/ url/ image/
+│   ├── README.md
+│   ├── text/
+│   │   ├── gmail-complaint-draft.md
+│   │   └── google-docs-report.md
+│   ├── url/
+│   │   ├── gmail-complaint-draft.md
+│   │   └── google-docs-report.md
+│   └── image/
+│       ├── gmail-complaint-draft.md
+│       └── google-docs-report.md
+└── expected-outputs/             # Ground truth dan kriteria evaluasi
+    ├── README.md
+    ├── evaluation-criteria.md
+    ├── text/
+    │   └── agent-response-example.md
+    ├── url/
+    │   └── agent-response-example.md
+    └── image/
+        └── agent-response-example.md
 ```
 
 ## Cara Menjalankan
