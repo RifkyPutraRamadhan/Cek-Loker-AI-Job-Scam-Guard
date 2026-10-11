@@ -1,3 +1,7 @@
+🌍 *Read this in other languages: [English](README.en.md) | [Indonesia](README.md)*
+
+---
+
 # Cek Loker — AI Job Scam Guard
 
 > Agen AI percakapan yang membantu pencari kerja menilai risiko sebuah tawaran lowongan **sebelum** mereka mengirim data pribadi atau uang.
